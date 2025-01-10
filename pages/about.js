@@ -114,7 +114,7 @@ export default function About() {
           <div className="inner">
             <div className="icon">
               <Image 
-                src="images/package_vector.png"
+                src="/images/package_vector.png"
                 alt="Package" width={100}  height={100}
               />
             </div>
@@ -131,7 +131,7 @@ export default function About() {
           <div className="inner">
             <div className="icon">
               <Image 
-                src="images/curation_vector.png" 
+                src="/images/curation_vector.png" 
                 alt="Curation" width={100}  height={100}
               />
             </div>
@@ -148,7 +148,7 @@ export default function About() {
           <div className="inner">
             <div className="icon">
               <Image 
-                src="images/auction_vector.png"
+                src="/images/auction_vector.png"
                 alt="Auction" width={100}  height={100}
               />
             </div>
@@ -178,7 +178,7 @@ export default function About() {
           <ul className="list">
             <li>
               <Image 
-                src="images/check_circle.svg"
+                src="/images/check_circle.svg"
                 width={60}
                 height={60}
                 alt="Check Circle"
