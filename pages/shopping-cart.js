@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Image from "next/image";
+
 
 export default function Shopping() {
   return (
     <>
-      <Header />
-      <>
+     
       <section id="cart">
     <div className="contain sm">
       <h3 className="mb-4">Shopping cart</h3>
@@ -29,8 +28,8 @@ export default function Shopping() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/01.jpg"
+                      <Image 
+                        src="/images/products/01.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -68,8 +67,8 @@ export default function Shopping() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/02.jpg"
+                      <Image 
+                        src="/images/products/02.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -107,8 +106,8 @@ export default function Shopping() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/03.jpg"
+                      <Image 
+                        src="/images/products/03.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -146,8 +145,8 @@ export default function Shopping() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/04.jpg"
+                      <Image 
+                        src="/images/products/04.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -199,7 +198,6 @@ export default function Shopping() {
 
 </>
 
-      <Footer />
-    </>
+   
   );
 }

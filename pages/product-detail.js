@@ -1,27 +1,48 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export default function ProductDetail() {
+  const settings = {
+    dots: true,
+    fade: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    customPaging: function (i) {
+      return (
+        <div>
+          <Image width={100}  height={100} 
+            src={`/images/fa752500afa252e18ff36e530522ee81.jpg_750x750 2.jpg`} // This should be dynamic or based on the current image
+            alt={`Slide ${i + 1}`}
+            style={{ width: "50px", height: "50px" }} // Adjust size as needed
+          />
+        </div>
+      );
+    },
+  };
   return (
     <>
-      <Header />
-      <>
+     
       <section id="details">
     <div className="contain">
       <form action="shopping-cart" method="POST">
         <div className="row flex_row">
           <div className="col1">
             <div className="in_col">
-              <div id="slick-detail" className="slick-carousel slick-slider">
+              <div >
+
+              <Slider {...settings}>
                 <div className="item">
                   <figure
                     data-href="images/fa752500afa252e18ff36e530522ee81.jpg_750x750 2.jpg"
                     className="image"
                     data-fancybox="detail"
                   >
-                    <img
-                      src="images/fa752500afa252e18ff36e530522ee81.jpg_750x750 2.jpg"
+                    <Image width={100}  height={100} 
+                      src="/images/fa752500afa252e18ff36e530522ee81.jpg_750x750 2.jpg"
                       alt=""
                     />
                   </figure>
@@ -32,7 +53,7 @@ export default function ProductDetail() {
                     className="image"
                     data-fancybox="detail"
                   >
-                    <img src="images/blog_01.jpg" alt="" />
+                    <Image width={100}  height={100}  src="/images/blog_01.jpg" alt="" />
                   </figure>
                 </div>
                 <div className="item">
@@ -41,7 +62,7 @@ export default function ProductDetail() {
                     className="image"
                     data-fancybox="detail"
                   >
-                    <img src="images/blog_02.jpg" alt="" />
+                    <Image width={100}  height={100}  src="/images/blog_02.jpg" alt="" />
                   </figure>
                 </div>
                 <div className="item">
@@ -50,7 +71,7 @@ export default function ProductDetail() {
                     className="image"
                     data-fancybox="detail"
                   >
-                    <img src="images/blog_03.jpg" alt="" />
+                    <Image width={100}  height={100}  src="/images/blog_03.jpg" alt="" />
                   </figure>
                 </div>
                 <div className="item">
@@ -59,9 +80,12 @@ export default function ProductDetail() {
                     className="image"
                     data-fancybox="detail"
                   >
-                    <img src="images/folio_01.jpg" alt="" />
+                    <Image width={100}  height={100}  src="/images/folio_01.jpg" alt="" />
                   </figure>
                 </div>
+
+
+                </Slider>
               </div>
             </div>
           </div>
@@ -75,7 +99,7 @@ export default function ProductDetail() {
               </div>
               <h6>Color</h6>
               <div className="color_ico ico">
-                <img src="images/color/black.jpg" alt="" />
+                <Image width={100}  height={100}  src="/images/color/black.jpg" alt="" />
               </div>
               <h6>Quantity</h6>
               <div className="qty_btn mb-4">
@@ -94,7 +118,7 @@ export default function ProductDetail() {
                 Buy Now
               </a>
               <a href="wishlist" className="site_btn blank stroke w-100">
-                <img src="images/icon-heart.svg" alt="" />
+                <Image width={100}  height={100}  src="/images/icon-heart.svg" alt="" />
                 Add to wishlist
               </a>
               <button
@@ -217,11 +241,11 @@ export default function ProductDetail() {
         <div className="col">
           <div className="product_item mini">
             <button type="button" className="like_btn">
-              <img src="images/icon-heart.svg" alt="Like Button" />
+              <Image width={100}  height={100}  src="/images/icon-heart.svg" alt="Like Button" />
             </button>
             <div className="image">
               <a href="product-detail">
-                <img src="images/products/01.jpg" alt="Product Photo" />
+                <Image width={100}  height={100}  src="/images/products/01.jpg" alt="Product Photo" />
               </a>
             </div>
             <div className="text">
@@ -233,8 +257,8 @@ export default function ProductDetail() {
               <div className="btm">
                 <div className="ico_blk">
                   <div className="ico fill round">
-                    <img
-                      src="images/users/01.webp"
+                    <Image
+                      src="/images/users/01.webp"
                       width={150}
                       height={150}
                       alt="User Photo"
@@ -250,11 +274,11 @@ export default function ProductDetail() {
         <div className="col">
           <div className="product_item mini">
             <button type="button" className="like_btn">
-              <img src="images/icon-heart.svg" alt="Like Button" />
+              <Image width={100}  height={100}  src="/images/icon-heart.svg" alt="Like Button" />
             </button>
             <div className="image">
               <a href="product-detail">
-                <img src="images/products/02.jpg" alt="Product Photo" />
+                <Image width={100}  height={100}  src="/images/products/02.jpg" alt="Product Photo" />
               </a>
             </div>
             <div className="text">
@@ -266,8 +290,8 @@ export default function ProductDetail() {
               <div className="btm">
                 <div className="ico_blk">
                   <div className="ico fill round">
-                    <img
-                      src="images/users/02.webp"
+                    <Image  
+                      src="/images/users/02.webp"
                       width={150}
                       height={150}
                       alt="User Photo"
@@ -283,11 +307,11 @@ export default function ProductDetail() {
         <div className="col">
           <div className="product_item mini">
             <button type="button" className="like_btn">
-              <img src="images/icon-heart.svg" alt="Like Button" />
+              <Image width={100}  height={100}  src="/images/icon-heart.svg" alt="Like Button" />
             </button>
             <div className="image">
               <a href="product-detail">
-                <img src="images/products/03.jpg" alt="Product Photo" />
+                <Image width={100}  height={100}  src="/images/products/03.jpg" alt="Product Photo" />
               </a>
             </div>
             <div className="text">
@@ -299,8 +323,8 @@ export default function ProductDetail() {
               <div className="btm">
                 <div className="ico_blk">
                   <div className="ico fill round">
-                    <img
-                      src="images/users/03.webp"
+                    <Image 
+                      src="/images/users/03.webp"
                       width={150}
                       height={150}
                       alt="User Photo"
@@ -316,11 +340,11 @@ export default function ProductDetail() {
         <div className="col">
           <div className="product_item mini">
             <button type="button" className="like_btn">
-              <img src="images/icon-heart.svg" alt="Like Button" />
+              <Image width={100}  height={100}  src="/images/icon-heart.svg" alt="Like Button" />
             </button>
             <div className="image">
               <a href="product-detail">
-                <img src="images/products/04.jpg" alt="Product Photo" />
+                <Image width={100}  height={100}  src="/images/products/04.jpg" alt="Product Photo" />
               </a>
             </div>
             <div className="text">
@@ -332,8 +356,8 @@ export default function ProductDetail() {
               <div className="btm">
                 <div className="ico_blk">
                   <div className="ico fill round">
-                    <img
-                      src="images/users/04.webp"
+                    <Image 
+                      src="/images/users/04.webp"
                       width={150}
                       height={150}
                       alt="User Photo"
@@ -349,11 +373,11 @@ export default function ProductDetail() {
         <div className="col">
           <div className="product_item mini">
             <button type="button" className="like_btn">
-              <img src="images/icon-heart.svg" alt="Like Button" />
+              <Image width={100}  height={100}  src="/images/icon-heart.svg" alt="Like Button" />
             </button>
             <div className="image">
               <a href="product-detail">
-                <img src="images/products/05.jpg" alt="Product Photo" />
+                <Image width={100}  height={100}  src="/images/products/05.jpg" alt="Product Photo" />
               </a>
             </div>
             <div className="text">
@@ -365,8 +389,8 @@ export default function ProductDetail() {
               <div className="btm">
                 <div className="ico_blk">
                   <div className="ico fill round">
-                    <img
-                      src="images/users/05.webp"
+                    <Image 
+                      src="/images/users/05.webp"
                       width={150}
                       height={150}
                       alt="User Photo"
@@ -386,7 +410,6 @@ export default function ProductDetail() {
 
 </>
 
-      <Footer />
-    </>
+   
   );
 }

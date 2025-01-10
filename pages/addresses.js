@@ -1,12 +1,10 @@
 import React from "react";
-import LoginHeader from "../components/LoginHeader";
-import Footer from "../components/Footer";
+
 
 export default function Addresses() {
   return (
     <>
-      <LoginHeader />
-      <>
+      
       <section id="address">
     <div className="contain sm">
       <h3 className="mb-4">Addresses</h3>
@@ -29,7 +27,7 @@ export default function Addresses() {
                 </p>
                 <hr />
                 <a href="edit-address" className="sm_btn">
-                  <img src="images/icon-edit.svg" alt="" />
+                  <img src="/images/icon-edit.svg" alt="" />
                   Edit
                 </a>
                 <hr />
@@ -38,7 +36,7 @@ export default function Addresses() {
                   className="sm_btn pop_btn"
                   data-popup="remove"
                 >
-                  <img src="images/icon-trash.svg" alt="" />
+                  <img src="/images/icon-trash.svg" alt="" />
                   Remove
                 </button>
               </div>
@@ -51,7 +49,7 @@ export default function Addresses() {
                 <p>6179 S Fulton St Englewood, CO 80111-5426</p>
                 <div className="btn_blk">
                   <button type="button" className="label red">
-                    <img src="images/icon-user-circle.svg" alt="" /> Set
+                    <img src="/images/icon-user-circle.svg" alt="" /> Set
                     as Default Shipping{" "}
                   </button>
                 </div>
@@ -63,7 +61,7 @@ export default function Addresses() {
                 </p>
                 <hr />
                 <a href="edit-address" className="sm_btn">
-                  <img src="images/icon-edit.svg" alt="" />
+                  <img src="/images/icon-edit.svg" alt="" />
                   Edit
                 </a>
                 <hr />
@@ -72,7 +70,7 @@ export default function Addresses() {
                   className="sm_btn pop_btn"
                   data-popup="remove"
                 >
-                  <img src="images/icon-trash.svg" alt="" />
+                  <img src="/images/icon-trash.svg" alt="" />
                   Remove
                 </button>
               </div>
@@ -85,7 +83,7 @@ export default function Addresses() {
                 <p>6179 S Fulton St Englewood, CO 80111-5426</p>
                 <div className="btn_blk">
                   <button type="button" className="label red">
-                    <img src="images/icon-user-circle.svg" alt="" /> Set
+                    <img src="/images/icon-user-circle.svg" alt="" /> Set
                     as Default Shipping{" "}
                   </button>
                 </div>
@@ -97,7 +95,7 @@ export default function Addresses() {
                 </p>
                 <hr />
                 <a href="edit-address" className="sm_btn">
-                  <img src="images/icon-edit.svg" alt="" />
+                  <img src="/images/icon-edit.svg" alt="" />
                   Edit
                 </a>
                 <hr />
@@ -106,7 +104,7 @@ export default function Addresses() {
                   className="sm_btn pop_btn"
                   data-popup="remove"
                 >
-                  <img src="images/icon-trash.svg" alt="" />
+                  <img src="/images/icon-trash.svg" alt="" />
                   Remove
                 </button>
               </div>
@@ -119,7 +117,7 @@ export default function Addresses() {
                 <p>6179 S Fulton St Englewood, CO 80111-5426</p>
                 <div className="btn_blk">
                   <button type="button" className="label red">
-                    <img src="images/icon-user-circle.svg" alt="" /> Set
+                    <img src="/images/icon-user-circle.svg" alt="" /> Set
                     as Default Shipping{" "}
                   </button>
                 </div>
@@ -131,7 +129,7 @@ export default function Addresses() {
                 </p>
                 <hr />
                 <a href="edit-address" className="sm_btn">
-                  <img src="images/icon-edit.svg" alt="" />
+                  <img src="/images/icon-edit.svg" alt="" />
                   Edit
                 </a>
                 <hr />
@@ -140,7 +138,7 @@ export default function Addresses() {
                   className="sm_btn pop_btn"
                   data-popup="remove"
                 >
-                  <img src="images/icon-trash.svg" alt="" />
+                  <img src="/images/icon-trash.svg" alt="" />
                   Remove
                 </button>
               </div>
@@ -154,7 +152,6 @@ export default function Addresses() {
 
 </>
 
-      <Footer />
-    </>
+      
   );
 }

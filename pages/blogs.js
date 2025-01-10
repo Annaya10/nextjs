@@ -1,31 +1,31 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Link from "next/link";
+import Image from "next/image";
+
 
 export default function Blogs() {
   return (
     <>
-      <Header />
-      <>
+      
       <section id="blog">
     <div className="contain">
       <div className="blog_blk feature mb-5">
         <div className="image">
-          <a href="blog-detail.php">
-            <img
-              src="images/experience.jpg"
+          <Link href="blog-detail">
+            <Image 
+              src="/images/experience.jpg"
               width={1000}
               height={800}
               alt="Blog Post"
             />
-          </a>
+          </Link >
         </div>
         <div className="text">
           <div className="tag">Nike</div>
           <h3>
-            <a href="blog-detail.php">
+            <Link href="blog-detail">
               Congue magna tempor and ipsum Martex sapien.....
-            </a>
+            </Link >
           </h3>
           <div className="time">1 Month Ago </div>
           <p>
@@ -33,9 +33,9 @@ export default function Blogs() {
             sed ex. Donec quis magna sed felis elementum blandit nec quis sem.
             Maecen.
           </p>
-          <a href="blog-detail.php" className="view_post">
+          <Link href="blog-detail" className="view_post">
             View Post
-          </a>
+          </Link >
         </div>
       </div>
       <div className="row">
@@ -43,20 +43,20 @@ export default function Blogs() {
           <div className="blog_blk">
             <div className="tag">Nike</div>
             <div className="image">
-              <a href="blog-detail.php">
-                <img
-                  src="images/blog_01.jpg"
+              <Link href="blog-detail">
+                <Image 
+                  src="/images/blog_01.jpg"
                   width={600}
                   height={500}
                   alt="Blog Post"
                 />
-              </a>
+              </Link >
             </div>
             <div className="text">
               <h4>
-                <a href="blog-detail.php">
+                <Link href="blog-detail">
                   Congue magna tempor and ipsum Martex sapien.....
-                </a>
+                </Link >
               </h4>
               <div className="time">1 Month Ago </div>
               <p>
@@ -64,9 +64,9 @@ export default function Blogs() {
                 eleifend sed ex. Donec quis magna sed felis elementum blandit
                 nec quis sem. Maecen.
               </p>
-              <a href="blog-detail.php" className="view_post">
+              <Link href="blog-detail" className="view_post">
                 View Post
-              </a>
+              </Link >
             </div>
           </div>
         </div>
@@ -74,20 +74,20 @@ export default function Blogs() {
           <div className="blog_blk">
             <div className="tag">Adidas</div>
             <div className="image">
-              <a href="blog-detail.php">
-                <img
-                  src="images/blog_02.jpg"
+              <Link href="blog-detail">
+                <Image 
+                  src="/images/blog_02.jpg"
                   width={600}
                   height={500}
                   alt="Blog Post"
                 />
-              </a>
+              </Link >
             </div>
             <div className="text">
               <h4>
-                <a href="blog-detail.php">
+                <Link href="blog-detail">
                   Congue magna tempor and ipsum Martex sapien.....
-                </a>
+                </Link >
               </h4>
               <div className="time">1 Month Ago </div>
               <p>
@@ -95,9 +95,9 @@ export default function Blogs() {
                 eleifend sed ex. Donec quis magna sed felis elementum blandit
                 nec quis sem. Maecen.
               </p>
-              <a href="blog-detail.php" className="view_post">
+              <Link href="blog-detail" className="view_post">
                 View Post
-              </a>
+              </Link >
             </div>
           </div>
         </div>
@@ -105,20 +105,20 @@ export default function Blogs() {
           <div className="blog_blk">
             <div className="tag">Reebok</div>
             <div className="image">
-              <a href="blog-detail.php">
-                <img
-                  src="images/blog_03.jpg"
+              <Link href="blog-detail">
+                <Image 
+                  src="/images/blog_03.jpg"
                   width={600}
                   height={500}
                   alt="Blog Post"
                 />
-              </a>
+              </Link >
             </div>
             <div className="text">
               <h4>
-                <a href="blog-detail.php">
+                <Link href="blog-detail">
                   Congue magna tempor and ipsum Martex sapien.....
-                </a>
+                </Link >
               </h4>
               <div className="time">1 Month Ago </div>
               <p>
@@ -126,9 +126,9 @@ export default function Blogs() {
                 eleifend sed ex. Donec quis magna sed felis elementum blandit
                 nec quis sem. Maecen.
               </p>
-              <a href="blog-detail.php" className="view_post">
+              <Link href="blog-detail" className="view_post">
                 View Post
-              </a>
+              </Link >
             </div>
           </div>
         </div>
@@ -136,20 +136,20 @@ export default function Blogs() {
           <div className="blog_blk">
             <div className="tag">Nike</div>
             <div className="image">
-              <a href="blog-detail.php">
-                <img
-                  src="images/folio_01.jpg"
+              <Link href="blog-detail">
+                <Image 
+                  src="/images/folio_01.jpg"
                   width={600}
                   height={500}
                   alt="Blog Post"
                 />
-              </a>
+              </Link >
             </div>
             <div className="text">
               <h4>
-                <a href="blog-detail.php">
+                <Link href="blog-detail">
                   Congue magna tempor and ipsum Martex sapien.....
-                </a>
+                </Link >
               </h4>
               <div className="time">1 Month Ago </div>
               <p>
@@ -157,9 +157,9 @@ export default function Blogs() {
                 eleifend sed ex. Donec quis magna sed felis elementum blandit
                 nec quis sem. Maecen.
               </p>
-              <a href="blog-detail.php" className="view_post">
+              <Link href="blog-detail" className="view_post">
                 View Post
-              </a>
+              </Link >
             </div>
           </div>
         </div>
@@ -167,20 +167,20 @@ export default function Blogs() {
           <div className="blog_blk">
             <div className="tag">Adidas</div>
             <div className="image">
-              <a href="blog-detail.php">
-                <img
-                  src="images/folio_02.jpg"
+              <Link href="blog-detail">
+                <Image 
+                  src="/images/folio_02.jpg"
                   width={600}
                   height={500}
                   alt="Blog Post"
                 />
-              </a>
+              </Link >
             </div>
             <div className="text">
               <h4>
-                <a href="blog-detail.php">
+                <Link href="blog-detail">
                   Congue magna tempor and ipsum Martex sapien.....
-                </a>
+                </Link >
               </h4>
               <div className="time">1 Month Ago </div>
               <p>
@@ -188,9 +188,9 @@ export default function Blogs() {
                 eleifend sed ex. Donec quis magna sed felis elementum blandit
                 nec quis sem. Maecen.
               </p>
-              <a href="blog-detail.php" className="view_post">
+              <Link href="blog-detail" className="view_post">
                 View Post
-              </a>
+              </Link >
             </div>
           </div>
         </div>
@@ -198,20 +198,20 @@ export default function Blogs() {
           <div className="blog_blk">
             <div className="tag">Reebok</div>
             <div className="image">
-              <a href="blog-detail.php">
-                <img
-                  src="images/mission.jpg"
+              <Link href="blog-detail">
+                <Image 
+                  src="/images/mission.jpg"
                   width={600}
                   height={500}
                   alt="Blog Post"
                 />
-              </a>
+              </Link >
             </div>
             <div className="text">
               <h4>
-                <a href="blog-detail.php">
+                <Link href="blog-detail">
                   Congue magna tempor and ipsum Martex sapien.....
-                </a>
+                </Link >
               </h4>
               <div className="time">1 Month Ago </div>
               <p>
@@ -219,9 +219,9 @@ export default function Blogs() {
                 eleifend sed ex. Donec quis magna sed felis elementum blandit
                 nec quis sem. Maecen.
               </p>
-              <a href="blog-detail.php" className="view_post">
+              <Link href="blog-detail" className="view_post">
                 View Post
-              </a>
+              </Link >
             </div>
           </div>
         </div>
@@ -232,19 +232,19 @@ export default function Blogs() {
             <button type="button" className="prev" />
           </li>
           <li className="active">
-            <a href="?">1</a>
+            <Link href="?">1</Link >
           </li>
           <li>
-            <a href="?">2</a>
+            <Link href="?">2</Link >
           </li>
           <li>
-            <a href="?">3</a>
+            <Link href="?">3</Link >
           </li>
           <li>
-            <a href="?">...</a>
+            <Link href="?">...</Link >
           </li>
           <li>
-            <a href="?">50</a>
+            <Link href="?">50</Link >
           </li>
           <li>
             <button type="button" className="next" />
@@ -257,7 +257,6 @@ export default function Blogs() {
 
 </>
 
-      <Footer />
-    </>
+    
   );
 }

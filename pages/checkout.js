@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export default function CheckOut() {
   return (
     <>
-      <Header />
-      <>
+      
       <section id="checkout">
     <div className="contain">
       <div className="row flex_row">
@@ -22,10 +20,10 @@ export default function CheckOut() {
                 Credit Card/Debit Card
               </div>
               <div className="cards_fig">
-                <img src="images/payment_visa.svg" alt="" />
-                <img src="images/payment_master.svg" alt="" />
-                <img src="images/payment_amex.svg" alt="" />
-                <img src="images/payment_discover.svg" alt="" />
+                <img src="/images/payment_visa.svg" alt="" />
+                <img src="/images/payment_master.svg" alt="" />
+                <img src="/images/payment_amex.svg" alt="" />
+                <img src="/images/payment_discover.svg" alt="" />
               </div>
               <small className="ms-3">and more...</small>
             </div>
@@ -364,7 +362,7 @@ export default function CheckOut() {
             <h4 className="mb-4">Seller Information</h4>
             <div className="seller_info">
               <div className="ico fill round">
-                <img src="images/users/01.webp" alt="" />
+                <img src="/images/users/01.webp" alt="" />
               </div>
               <div className="text_r">
                 <div className="name">Aleena Gilbert</div>
@@ -401,7 +399,7 @@ export default function CheckOut() {
                         <div className="ico fill round">
                           <a href="product-detail">
                             <img
-                              src="images/products/01.jpg"
+                              src="/images/products/01.jpg"
                               width={200}
                               height={200}
                               alt=""
@@ -427,7 +425,7 @@ export default function CheckOut() {
                 <tr>
                   <td colSpan={2}>
                     <div className="free_ship">
-                      <img src="images/icon-truck.svg" alt="" /> $2.03
+                      <img src="/images/icon-truck.svg" alt="" /> $2.03
                       away from &nbsp;<strong>Free Shipping!</strong>
                     </div>
                   </td>
@@ -449,7 +447,7 @@ export default function CheckOut() {
                 <tr>
                   <td colSpan={2}>
                     <div className="info_blk">
-                      <img src="images/icon-info.svg" alt="" />
+                      <img src="/images/icon-info.svg" alt="" />
                       <span className="small">
                         Estimated delivery &amp; tax for 17857
                       </span>
@@ -480,7 +478,6 @@ export default function CheckOut() {
 
 </>
 
-      <Footer />
-    </>
+    
   );
 }

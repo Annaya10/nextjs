@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export default function OrderDetail() {
   return (
-    <>
-      <Header />
+   
       <>
       <section id="track">
     <div className="contain sm">
@@ -40,7 +38,7 @@ export default function OrderDetail() {
             <h5 className="mb-4">Product Information</h5>
             <div className="inner_flex order_detail_detail">
               <div className="image">
-                <img src="images/products/03.jpg" alt="Product Photo" />
+                <img src="/images/products/03.jpg" alt="Product Photo" />
               </div>
               <div className="title">
                 <p>Women's Hooded Loungewear Set - L / Khaki</p>
@@ -179,7 +177,7 @@ export default function OrderDetail() {
             <div className="review_blk">
               <div className="review_flex">
                 <div className="image">
-                  <img src="images/users/03.webp" alt="User Photo" />
+                  <img src="/images/users/03.webp" alt="User Photo" />
                 </div>
                 <div className="title">
                   <p>Aleena Gilbert</p>
@@ -277,7 +275,6 @@ export default function OrderDetail() {
 
 </>
 
-      <Footer />
-    </>
+     
   );
 }

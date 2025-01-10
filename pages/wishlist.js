@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Image from "next/image";
+
 
 export default function wishlist() {
   return (
-    <>
-      <Header />
+   
       <>
       <section id="wishlist">
     <div className="contain sm">
@@ -30,8 +29,8 @@ export default function wishlist() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/01.jpg"
+                      <Image 
+                        src="/images/products/01.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -67,8 +66,8 @@ export default function wishlist() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/02.jpg"
+                      <Image 
+                        src="/images/products/02.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -104,8 +103,8 @@ export default function wishlist() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/03.jpg"
+                      <Image 
+                        src="/images/products/03.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -141,8 +140,8 @@ export default function wishlist() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/04.jpg"
+                      <Image 
+                        src="/images/products/04.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -178,8 +177,8 @@ export default function wishlist() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/05.jpg"
+                      <Image 
+                        src="/images/products/05.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -215,8 +214,8 @@ export default function wishlist() {
                 <div className="ico_blk">
                   <div className="ico fill round">
                     <a href="product-detail">
-                      <img
-                        src="images/products/06.jpg"
+                      <Image 
+                        src="/images/products/06.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -278,7 +277,6 @@ export default function wishlist() {
 
 </>
 
-      <Footer />
-    </>
+     
   );
 }

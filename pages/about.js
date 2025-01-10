@@ -1,11 +1,12 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Testimonials from "@/components/Testimonials";
+import Image from "next/image";
+
 
 export default function About() {
   return (
     <>
-      <Header />
+   
       <>
       <section id="about">
     <div id="bar">
@@ -45,8 +46,8 @@ export default function About() {
             </div>
           </div>
           <div className="image">
-            <img
-              src="images/mission.jpg"
+            <Image 
+              src="/images/mission.jpg"
               width={800}
               height={600}
               alt="Mission Photo"
@@ -59,8 +60,8 @@ export default function About() {
       <div className="contain">
         <div className="wrapper">
           <div className="image">
-            <img
-              src="images/experience.jpg"
+            <Image 
+              src="/images/experience.jpg"
               width={800}
               height={600}
               alt="Experience Photo"
@@ -112,9 +113,9 @@ export default function About() {
         <div className="column">
           <div className="inner">
             <div className="icon">
-              <img
+              <Image 
                 src="images/package_vector.png"
-                alt="Package"
+                alt="Package" width={100}  height={100}
               />
             </div>
             <div className="text">
@@ -129,9 +130,9 @@ export default function About() {
         <div className="column">
           <div className="inner">
             <div className="icon">
-              <img
-                src="images/curation_vector.png"
-                alt="Curation"
+              <Image 
+                src="images/curation_vector.png" 
+                alt="Curation" width={100}  height={100}
               />
             </div>
             <div className="text">
@@ -146,9 +147,9 @@ export default function About() {
         <div className="column">
           <div className="inner">
             <div className="icon">
-              <img
+              <Image 
                 src="images/auction_vector.png"
-                alt="Auction"
+                alt="Auction" width={100}  height={100}
               />
             </div>
             <div className="text">
@@ -176,7 +177,7 @@ export default function About() {
           </p>
           <ul className="list">
             <li>
-              <img
+              <Image 
                 src="images/check_circle.svg"
                 width={60}
                 height={60}
@@ -191,8 +192,8 @@ export default function About() {
               </div>
             </li>
             <li>
-              <img
-                src="images/check_circle.svg"
+              <Image 
+                src="/images/check_circle.svg"
                 width={60}
                 height={60}
                 alt="Check Circle"
@@ -206,8 +207,8 @@ export default function About() {
               </div>
             </li>
             <li>
-              <img
-                src="images/check_circle.svg"
+              <Image 
+                src="/images/check_circle.svg"
                 width={60}
                 height={60}
                 alt="Check Circle"
@@ -232,8 +233,8 @@ export default function About() {
           </div>
         </div>
         <div className="image">
-          <img
-            src="images/secure_transaction.png"
+          <Image 
+            src="/images/secure_transaction.png"
             width={800}
             height={800}
             alt="Secure Transaction"
@@ -243,85 +244,10 @@ export default function About() {
     </div>
   </section>
   {/* trust */}
-  <section id="folio">
-    <div className="contain">
-      <div className="content">
-        <h3>What our clients say about us</h3>
-        <p>Our customers say Excellent</p>
-      </div>
-      <div id="slick-folio" className="slick-carousel slick-slider">
-        <div className="item">
-          <div className="folio_blk">
-            <div className="text">
-              <div className="comma">
-                <img
-                  src="images/comma.svg"
-                  width={100}
-                  height={100}
-                  alt="Comma Icon"
-                />
-              </div>
-              <p>
-                “I've never experienced such an exciting way to get my hands on
-                premium tracksuits! The bidding process was seamless, and the
-                quality of the tracksuit I won exceeded my expectations.
-                Definitely my go-to for athletic wear now!”
-              </p>
-            </div>
-            <div className="image">
-              <img
-                src="images/folio_01.jpg"
-                width={800}
-                height={600}
-                alt="Folio Photo"
-              />
-              <div className="btm">
-                <div className="name">Albert Flores</div>
-                <div className="desg">Product Manager at Jomanar</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="item">
-          <div className="folio_blk">
-            <div className="text">
-              <div className="comma">
-                <img
-                  src="images/comma.svg"
-                  width={100}
-                  height={100}
-                  alt="Comma Icon"
-                />
-              </div>
-              <p>
-                “I've never experienced such an exciting way to get my hands on
-                premium tracksuits! The bidding process was seamless, and the
-                quality of the tracksuit I won exceeded my expectations.
-                Definitely my go-to for athletic wear now!”
-              </p>
-            </div>
-            <div className="image">
-              <img
-                src="images/folio_02.jpg"
-                width={800}
-                height={600}
-                alt="Folio Photo"
-              />
-              <div className="btm">
-                <div className="name">Jennifer Kem</div>
-                <div className="desg">Product Manager at Jomanar</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* folio */}
+  <Testimonials />
 
 </>
 
-      <Footer />
     </>
   );
 }

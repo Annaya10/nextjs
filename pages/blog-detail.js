@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export default function BlogDetail() {
   return (
     <>
-      <Header />
-      <>
+      
       <section id="blog_details">
     <div className="contain">
       <div className="text text-center">
@@ -16,7 +14,7 @@ export default function BlogDetail() {
       </div>
       <div className="image">
         <img
-          src="images/experience.jpg"
+          src="/images/experience.jpg"
           width={1000}
           height={800}
           alt="Blog Post"
@@ -105,7 +103,7 @@ export default function BlogDetail() {
                 aria-label="Facebook"
               >
                 <img
-                  src="images/social_facebook.svg"
+                  src="/images/social_facebook.svg"
                   width={100}
                   height={100}
                   alt="Facebook Icon"
@@ -119,7 +117,7 @@ export default function BlogDetail() {
                 aria-label="Twitter"
               >
                 <img
-                  src="images/social_twitter.svg"
+                  src="/images/social_twitter.svg"
                   width={100}
                   height={100}
                   alt="Twitter Icon"
@@ -133,7 +131,7 @@ export default function BlogDetail() {
                 aria-label="Linkedin"
               >
                 <img
-                  src="images/social_linkedin.svg"
+                  src="/images/social_linkedin.svg"
                   width={100}
                   height={100}
                   alt="Linkedin Icon"
@@ -147,7 +145,7 @@ export default function BlogDetail() {
                 aria-label="Instagram"
               >
                 <img
-                  src="images/social_instagram.svg"
+                  src="/images/social_instagram.svg"
                   width={100}
                   height={100}
                   alt="Instagram Icon"
@@ -161,7 +159,7 @@ export default function BlogDetail() {
                 aria-label="Pinterest"
               >
                 <img
-                  src="images/social_pinterest.svg"
+                  src="/images/social_pinterest.svg"
                   width={100}
                   height={100}
                   alt="Pinterest Icon"
@@ -177,7 +175,6 @@ export default function BlogDetail() {
 
 </>
 
-      <Footer />
-    </>
+     
   );
 }

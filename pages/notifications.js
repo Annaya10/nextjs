@@ -1,12 +1,10 @@
 import React from "react";
-import LoginHeader from "../components/LoginHeader";
-import Footer from "../components/Footer";
+
 
 export default function Notifications() {
   return (
     <>
-      <LoginHeader />
-      <>
+      
       <section id="notifications">
     <div className="contain sm">
       <h3 className="mb-4">Notifications</h3>
@@ -19,7 +17,7 @@ export default function Notifications() {
                   <div className="noti_blk">
                     <div className="ico fill round">
                       <a href="?">
-                        <img src="images/users/01.webp" alt="" />
+                        <img src="/images/users/01.webp" alt="" />
                       </a>
                     </div>
                     <div className="txt">
@@ -38,7 +36,7 @@ export default function Notifications() {
                   <div className="noti_blk">
                     <div className="ico fill round">
                       <a href="?">
-                        <img src="images/users/02.webp" alt="" />
+                        <img src="/images/users/02.webp" alt="" />
                       </a>
                     </div>
                     <div className="txt">
@@ -57,7 +55,7 @@ export default function Notifications() {
                   <div className="noti_blk">
                     <div className="ico fill round">
                       <a href="?">
-                        <img src="images/users/03.webp" alt="" />
+                        <img src="/images/users/03.webp" alt="" />
                       </a>
                     </div>
                     <div className="txt">
@@ -76,7 +74,7 @@ export default function Notifications() {
                   <div className="noti_blk">
                     <div className="ico fill round">
                       <a href="?">
-                        <img src="images/users/04.webp" alt="" />
+                        <img src="/images/users/04.webp" alt="" />
                       </a>
                     </div>
                     <div className="txt">
@@ -95,7 +93,7 @@ export default function Notifications() {
                   <div className="noti_blk">
                     <div className="ico fill round">
                       <a href="?">
-                        <img src="images/users/05.webp" alt="" />
+                        <img src="/images/users/05.webp" alt="" />
                       </a>
                     </div>
                     <div className="txt">
@@ -114,7 +112,7 @@ export default function Notifications() {
                   <div className="noti_blk">
                     <div className="ico fill round">
                       <a href="?">
-                        <img src="images/users/06.webp" alt="" />
+                        <img src="/images/users/06.webp" alt="" />
                       </a>
                     </div>
                     <div className="txt">
@@ -130,7 +128,7 @@ export default function Notifications() {
                   <div className="noti_blk">
                     <div className="ico fill round">
                       <a href="?">
-                        <img src="images/users/07.webp" alt="" />
+                        <img src="/images/users/07.webp" alt="" />
                       </a>
                     </div>
                     <div className="txt">
@@ -182,7 +180,6 @@ export default function Notifications() {
 
 </>
 
-      <Footer />
-    </>
+     
   );
 }

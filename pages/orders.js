@@ -1,12 +1,10 @@
 import React from "react";
-import LoginHeader from "../components/LoginHeader";
-import Footer from "../components/Footer";
+
 
 export default function Order() {
   return (
     <>
-      <LoginHeader />
-      <>
+     
       <section id="orders">
     <div className="contain sm">
       <h3 className="mb-4">Orders</h3>
@@ -22,7 +20,7 @@ export default function Order() {
                 placeholder="Search by Order ID or Product"
               />
               <button type="submit" className="ico_btn">
-                <img src="images/icon-search.svg" alt="" />
+                <img src="/images/icon-search.svg" alt="" />
               </button>
             </div>
           </div>
@@ -104,7 +102,7 @@ export default function Order() {
                   <div className="ico fill round">
                     <a href="product-detail">
                       <img
-                        src="images/products/01.jpg"
+                        src="/images/products/01.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -146,7 +144,7 @@ export default function Order() {
                   <div className="ico fill round">
                     <a href="product-detail">
                       <img
-                        src="images/products/02.jpg"
+                        src="/images/products/02.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -188,7 +186,7 @@ export default function Order() {
                   <div className="ico fill round">
                     <a href="product-detail">
                       <img
-                        src="images/products/03.jpg"
+                        src="/images/products/03.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -230,7 +228,7 @@ export default function Order() {
                   <div className="ico fill round">
                     <a href="product-detail">
                       <img
-                        src="images/products/04.jpg"
+                        src="/images/products/04.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -272,7 +270,7 @@ export default function Order() {
                   <div className="ico fill round">
                     <a href="product-detail">
                       <img
-                        src="images/products/05.jpg"
+                        src="/images/products/05.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -314,7 +312,7 @@ export default function Order() {
                   <div className="ico fill round">
                     <a href="product-detail">
                       <img
-                        src="images/products/06.jpg"
+                        src="/images/products/06.jpg"
                         width={200}
                         height={200}
                         alt=""
@@ -384,7 +382,6 @@ export default function Order() {
 
 </>
 
-      <Footer />
-    </>
+      
   );
 }

@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+
 
 export default function Help() {
   return (
-    <>
-      <Header />
+   
       <>
       <section id="help">
     <div className="contain">
@@ -21,7 +19,7 @@ export default function Help() {
           />
           <button type="submit">
             <img
-              src="images/icon-search.svg"
+              src="/images/icon-search.svg"
               width={60}
               height={60}
               alt="Search Icon"
@@ -92,7 +90,6 @@ export default function Help() {
 
 </>
 
-      <Footer />
-    </>
+     
   );
 }

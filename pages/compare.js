@@ -1,12 +1,10 @@
 import React from "react";
-import LoginHeader from "../components/LoginHeader";
-import Footer from "../components/Footer";
+
 
 export default function Compare() {
   return (
     <>
-      <LoginHeader />
-      <>
+     
       <section id="compare">
     <div className="contain">
       <h3 className="mb-4">Compare</h3>
@@ -70,7 +68,7 @@ export default function Compare() {
                   <div className="image">
                     <a href="product-detail">
                       <img
-                        src="images/products/01.jpg"
+                        src="/images/products/01.jpg"
                         width={600}
                         height={600}
                         alt=""
@@ -82,7 +80,7 @@ export default function Compare() {
                   <div className="image">
                     <a href="product-detail">
                       <img
-                        src="images/products/02.jpg"
+                        src="/images/products/02.jpg"
                         width={600}
                         height={600}
                         alt=""
@@ -94,7 +92,7 @@ export default function Compare() {
                   <div className="image">
                     <a href="product-detail">
                       <img
-                        src="images/products/03.jpg"
+                        src="/images/products/03.jpg"
                         width={600}
                         height={600}
                         alt=""
@@ -106,7 +104,7 @@ export default function Compare() {
                   <div className="image">
                     <a href="product-detail">
                       <img
-                        src="images/products/04.jpg"
+                        src="/images/products/04.jpg"
                         width={600}
                         height={600}
                         alt=""
@@ -118,7 +116,7 @@ export default function Compare() {
                   <div className="image">
                     <a href="product-detail">
                       <img
-                        src="images/products/05.jpg"
+                        src="/images/products/05.jpg"
                         width={600}
                         height={600}
                         alt=""
@@ -359,7 +357,6 @@ export default function Compare() {
 
 </>
 
-      <Footer />
-    </>
+     
   );
 }

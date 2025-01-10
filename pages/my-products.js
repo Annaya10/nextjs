@@ -1,11 +1,9 @@
 import React from "react";
-import LoginHeader from "../components/LoginHeader";
-import Footer from "../components/Footer";
+
 
 export default function MyProducts() {
   return (
-    <>
-      <LoginHeader />
+    
       <>
       <section id="my-products">
     <div className="contain">
@@ -17,7 +15,7 @@ export default function MyProducts() {
               <a href="" className="inner_flex">
                 <div className="image">
                   <img
-                    src="images/products/01.jpg"
+                    src="/images/products/01.jpg"
                     alt="Product Photo"
                   />
                 </div>
@@ -72,7 +70,7 @@ export default function MyProducts() {
               <a href="" className="inner_flex">
                 <div className="image">
                   <img
-                    src="images/products/02.jpg"
+                    src="/images/products/02.jpg"
                     alt="Product Photo"
                   />
                 </div>
@@ -127,7 +125,7 @@ export default function MyProducts() {
               <a href="" className="inner_flex">
                 <div className="image">
                   <img
-                    src="images/products/03.jpg"
+                    src="/images/products/03.jpg"
                     alt="Product Photo"
                   />
                 </div>
@@ -182,7 +180,7 @@ export default function MyProducts() {
               <a href="" className="inner_flex">
                 <div className="image">
                   <img
-                    src="images/products/01.jpg"
+                    src="/images/products/01.jpg"
                     alt="Product Photo"
                   />
                 </div>
@@ -237,7 +235,7 @@ export default function MyProducts() {
               <a href="" className="inner_flex">
                 <div className="image">
                   <img
-                    src="images/products/02.jpg"
+                    src="/images/products/02.jpg"
                     alt="Product Photo"
                   />
                 </div>
@@ -292,7 +290,7 @@ export default function MyProducts() {
               <a href="" className="inner_flex">
                 <div className="image">
                   <img
-                    src="images/products/03.jpg"
+                    src="/images/products/03.jpg"
                     alt="Product Photo"
                   />
                 </div>
@@ -375,7 +373,6 @@ export default function MyProducts() {
 
 </>
 
-      <Footer />
-    </>
+    
   );
 }

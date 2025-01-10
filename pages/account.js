@@ -1,17 +1,15 @@
 import React from "react";
-import LoginHeader from "../components/LoginHeader";
-import Footer from "../components/Footer";
+
 
 export default function Account() {
   return (
-    <>
-      <LoginHeader />
+  
       <>
       <section id="account">
     <div className="contain sm">
       <div className="pro_blk">
         <div className="ico fill round">
-          <img src="images/users/01.webp" alt="" />
+          <img src="/images/users/01.webp" alt="" />
         </div>
         <div className="txt">
           <h2>
@@ -26,7 +24,7 @@ export default function Account() {
           <h4 className="mb-4">Personal information</h4>
           <div className="dp_blk">
             <div className="ico fill round">
-              <img src="images/users/01.webp" alt="" />
+              <img src="/images/users/01.webp" alt="" />
             </div>
             <div className="txt">
               <div className="btn_blk">
@@ -251,7 +249,6 @@ export default function Account() {
 
 </>
 
-      <Footer />
-    </>
+
   );
 }

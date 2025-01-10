@@ -1,12 +1,105 @@
 // pages/index.js
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Image from 'next/image'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ProductItem from "@/components/ProductItem";
+import Blog from "@/components/Blog";
+import Slider from "react-slick";
+import Testimonials from "@/components/Testimonials";
 
+
+
+ 
+const products = [
+  {
+    id: 1,
+    title: "Women's Hooded Loungewear Set - L / Khaki",
+    price: 200,
+    image: "/images/products/01.jpg",
+  },
+  {
+    id: 2,
+    title: "Men's Athletic Hoodie - XL / Black",
+    price: 250,
+    image: "/images/products/02.jpg",
+  },
+
+];
+
+const blogs = [
+  {
+    "id": 1,
+    "tag": "Reebok",
+    "image": "/images/blog_03.jpg",
+    "title": "Congue magna tempor and ipsum Martex sapien.....",
+    "time": "1 Month Ago",
+    "description": "lit. Phasellus aliquet nibh id iaculis pharetra. Maecenas eleifend sed ex. Donec quis magna sed felis elementum blandit nec quis sem. Maecen."
+  },
+  {
+    "id": 2,
+    "tag": "Nike",
+    "image": "/images/blog_02.jpg",
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "time": "2 Weeks Ago",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra, felis nec pellentesque sodales, est purus vestibulum neque, non commodo est urna eu eros."
+  },
+  {
+    "id": 3,
+    "tag": "Adidas",
+    "image": "/images/blog_01.jpg",
+    "title": "Vestibulum vitae nunc ut urna ullamcorper sollicitudin.",
+    "time": "3 Days Ago",
+    "description": "Vestibulum vitae nunc ut urna ullamcorper sollicitudin. Quisque eget neque eu augue iaculis tincidunt."
+  },
+
+];
 export default function Home() {
+  var settings = {
+    dots: true,
+		arrows: false,
+		infinite: true,
+		speed: 1000,
+		slidesToShow: 8,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 7,
+				},
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 6,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 5,
+				},
+			},
+			{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 4,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 3,
+				},
+			},
+		],
+  };
+
+  
   return (
-    <>
-      <Header />
+
+   
       <>
   <section
     id="banner"
@@ -29,41 +122,7 @@ export default function Home() {
       </div>
     </div>
   </section>
-  {/* banner */}
-  {/* <section id="points">
-		<div class="contain">
-			<div class="wrapper">
-				<div class="column">
-					<div class="inner">
-						<div class="icon"><img src="/images/package_vector.png" alt="Package"></div>
-						<div class="text">
-							<div class="h5">Millions of unique items</div>
-							<p>Enter your bid amount and confirm your bid. Keep an eye on the bidding activity to stay informed about competing offers.</p>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="inner">
-						<div class="icon"><img src="/images/curation_vector.png" alt="Curation"></div>
-						<div class="text">
-							<div class="h5">Curated by experts</div>
-							<p>Enter your bid amount and confirm your bid. Keep an eye on the bidding activity to stay informed about competing offers.</p>
-						</div>
-					</div>
-				</div>
-				<div class="column">
-					<div class="inner">
-						<div class="icon"><img src="/images/auction_vector.png" alt="Auction"></div>
-						<div class="text">
-							<div class="h5">Bid with ease</div>
-							<p>Enter your bid amount and confirm your bid. Keep an eye on the bidding activity to stay informed about competing offers.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> */}
-  {/* points */}
+  
   <section id="feature">
     <div className="contain">
       <div className="content">
@@ -79,336 +138,9 @@ export default function Home() {
         </a>
       </div>
       <div className="row card_row">
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/01.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/02.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/03.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/04.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/05.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/06.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/07.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/08.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/09.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/10.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/11.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/12.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/01.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/02.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/03.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="start_price">
-                <small>Starting</small> $200
-              </div>
-            </div>
-          </div>
-        </div>
+      {products.map((product) => (
+        <ProductItem key={product.id} product={product} />
+      ))}
       </div>
     </div>
   </section>
@@ -422,84 +154,100 @@ export default function Home() {
           activity to stay informed about competing offers.
         </p>
       </div>
-      <div id="slick-brands" className="slick-carousel slick-slider">
+
+     
+      <div>
+      <Slider {...settings}>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_01.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_01.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_02.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_02.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_03.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_03.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_04.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_04.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_05.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_05.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_06.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_06.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_07.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_07.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_08.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_08.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_03.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_03.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_04.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_04.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
         <div className="item">
           <div className="icon">
             <a href="?">
-              <img src="/images/brand_05.png" alt="Brand Logo" />
+              <Image  width={100}
+      height={100}src="/images/brand_05.png" alt="Brand Logo" />
             </a>
           </div>
         </div>
+
+        </Slider>
       </div>
     </div>
   </section>
@@ -517,7 +265,8 @@ export default function Home() {
         <div className="column">
           <div className="inner">
             <div className="icon">
-              <img src="/images/browse_vector.png" alt="Browse" />
+              <Image  width={100}
+      height={100}src="/images/browse_vector.png" alt="Browse" />
             </div>
             <div className="text">
               <div className="h5">Browse Item</div>
@@ -532,7 +281,8 @@ export default function Home() {
         <div className="column">
           <div className="inner">
             <div className="icon">
-              <img src="/images/bid_vector.png" alt="Bid" />
+              <Image  width={100}
+      height={100}src="/images/bid_vector.png" alt="Bid" />
             </div>
             <div className="text">
               <div className="h5">Choose Your Tracksuit</div>
@@ -547,7 +297,8 @@ export default function Home() {
         <div className="column">
           <div className="inner">
             <div className="icon">
-              <img src="/images/winner_vector.png" alt="Winner" />
+              <Image  width={100}
+      height={100}src="/images/winner_vector.png" alt="Winner" />
             </div>
             <div className="text">
               <div className="h5">Winning and Payment</div>
@@ -578,876 +329,13 @@ export default function Home() {
         </a>
       </div>
       <div className="row card_row">
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/01.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/01.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/02.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/02.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Mike Tyson</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/03.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/03.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Monica Kajvral</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/04.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/04.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Samira Jones</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/05.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/05.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">John Wick</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/06.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/06.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/07.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/01.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/08.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/02.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Mike Tyson</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/09.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/03.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Monica Kajvral</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/10.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/04.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Samira Jones</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/11.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/05.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">John Wick</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/12.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/06.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/01.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/01.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/02.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/02.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Mike Tyson</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/03.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/03.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Monica Kajvral</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/04.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/04.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Samira Jones</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/05.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/05.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">John Wick</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/06.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/06.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/07.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/01.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/08.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/02.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Mike Tyson</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/09.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/03.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Monica Kajvral</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/10.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/04.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Samira Jones</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/11.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/05.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">John Wick</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/12.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/06.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="product_item mini">
-            <button type="button" className="like_btn">
-              <img src="/images/icon-heart.svg" alt="Like Button" />
-            </button>
-            <div className="image">
-              <a href="product-detail">
-                <img src="/images/products/01.jpg" alt="Product Photo" />
-              </a>
-            </div>
-            <div className="text">
-              <div className="title">
-                <a href="product-detail">
-                  Women's Hooded Loungewear Set - L / Khaki
-                </a>
-              </div>
-              <div className="btm">
-                <div className="ico_blk">
-                  <div className="ico fill round">
-                    <img
-                      src="images/users/01.webp"
-                      width={150}
-                      height={150}
-                      alt="User Photo"
-                    />
-                  </div>
-                  <div className="name">Jennifer Kem</div>
-                </div>
-                <div className="price">$200</div>
-              </div>
-            </div>
-          </div>
-        </div>
+       {products.map((product) => (
+        <ProductItem key={product.id} product={product} />
+      ))}
       </div>
     </div>
   </section>
-  {/* items */}
-  {/* <section id="trust" class="pt-0">
-		<div class="contain">
-			<div class="wrapper">
-				<div class="content">
-					<h3>Trust and Security</h3>
-					<p>We prioritize the security and trust of our users. Your peace of mind is essential to us, and we want to ensure a safe and enjoyable bidding experience. Here's how we guarantee your trust and security:</p>
-					<ul class="list">
-						<li>
-							<img src="/images/check_circle.svg" width="60" height="60" alt="Check Circle">
-							<div class="inr">
-								<h5>Secure Transactions</h5>
-								<p>Your transactions are encrypted and secure, ensuring the confidentiality and integrity of your financial information.</p>
-							</div>
-						</li>
-						<li>
-							<img src="/images/check_circle.svg" width="60" height="60" alt="Check Circle">
-							<div class="inr">
-								<h5>Trusted Payment Options</h5>
-								<p>Choose from a variety of trusted and secure payment options, including major credit cards and PayPal.</p>
-							</div>
-						</li>
-						<li>
-							<img src="/images/check_circle.svg" width="60" height="60" alt="Check Circle">
-							<div class="inr">
-								<h5>Data Protection</h5>
-								<p>We are committed to safeguarding your data. Our robust data protection measures ensure the privacy and confidentiality of your personal information.</p>
-							</div>
-						</li>
-					</ul>
-					<div class="btn_blk mt-5">
-						<a href="?" class="site_btn">Start Bidding Now!</a>
-						<a href="?" class="site_btn simple stroke px">Read More</a>
-					</div>
-				</div>
-				<div class="image">
-					<img src="/images/secure_transaction.png" width="800" height="800" alt="Secure Transaction">
-				</div>
-			</div>
-		</div>
-	</section> */}
-  {/* trust */}
+ 
   <section id="posts">
     <div className="contain">
       <div className="content">
@@ -1459,181 +347,17 @@ export default function Home() {
         </a>
       </div>
       <div className="row">
-        <div className="col-lg-4">
-          <div className="blog_blk">
-            <div className="tag">Nike</div>
-            <div className="image">
-              <a href="blog-detail">
-                <img
-                  src="/images/blog_01.jpg"
-                  width={600}
-                  height={500}
-                  alt="Blog Post"
-                />
-              </a>
-            </div>
-            <div className="text">
-              <h4>
-                <a href="blog-detail">
-                  Congue magna tempor and ipsum Martex sapien.....
-                </a>
-              </h4>
-              <div className="time">1 Month Ago </div>
-              <p>
-                lit. Phasellus aliquet nibh id iaculis pharetra. Maecenas
-                eleifend sed ex. Donec quis magna sed felis elementum blandit
-                nec quis sem. Maecen.
-              </p>
-              <a href="blog-detail" className="view_post">
-                View Post
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4">
-          <div className="blog_blk">
-            <div className="tag">Adidas</div>
-            <div className="image">
-              <a href="blog-detail">
-                <img
-                  src="/images/blog_02.jpg"
-                  width={600}
-                  height={500}
-                  alt="Blog Post"
-                />
-              </a>
-            </div>
-            <div className="text">
-              <h4>
-                <a href="blog-detail">
-                  Congue magna tempor and ipsum Martex sapien.....
-                </a>
-              </h4>
-              <div className="time">1 Month Ago </div>
-              <p>
-                lit. Phasellus aliquet nibh id iaculis pharetra. Maecenas
-                eleifend sed ex. Donec quis magna sed felis elementum blandit
-                nec quis sem. Maecen.
-              </p>
-              <a href="blog-detail" className="view_post">
-                View Post
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-4">
-          <div className="blog_blk">
-            <div className="tag">Reebok</div>
-            <div className="image">
-              <a href="blog-detail">
-                <img
-                  src="/images/blog_03.jpg"
-                  width={600}
-                  height={500}
-                  alt="Blog Post"
-                />
-              </a>
-            </div>
-            <div className="text">
-              <h4>
-                <a href="blog-detail">
-                  Congue magna tempor and ipsum Martex sapien.....
-                </a>
-              </h4>
-              <div className="time">1 Month Ago </div>
-              <p>
-                lit. Phasellus aliquet nibh id iaculis pharetra. Maecenas
-                eleifend sed ex. Donec quis magna sed felis elementum blandit
-                nec quis sem. Maecen.
-              </p>
-              <a href="blog-detail" className="view_post">
-                View Post
-              </a>
-            </div>
-          </div>
-        </div>
+      {blogs.map((blog) => (
+        <Blog key={blog.id} blog={blog} />
+      ))}
       </div>
     </div>
   </section>
   {/* posts */}
-  <section id="folio">
-    <div className="contain">
-      <div className="content">
-        <h3>What our clients say about us</h3>
-        <p>Our customers say Excellent</p>
-      </div>
-      <div id="slick-folio" className="slick-carousel slick-slider">
-        <div className="item">
-          <div className="folio_blk">
-            <div className="text">
-              <div className="comma">
-                <img
-                  src="/images/comma.svg"
-                  width={100}
-                  height={100}
-                  alt="Comma Icon"
-                />
-              </div>
-              <p>
-                “I've never experienced such an exciting way to get my hands on
-                premium tracksuits! The bidding process was seamless, and the
-                quality of the tracksuit I won exceeded my expectations.
-                Definitely my go-to for athletic wear now!”
-              </p>
-            </div>
-            <div className="image">
-              <img
-                src="/images/folio_01.jpg"
-                width={800}
-                height={600}
-                alt="Folio Photo"
-              />
-              <div className="btm">
-                <div className="name">Albert Flores</div>
-                <div className="desg">Product Manager at Jomanar</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="item">
-          <div className="folio_blk">
-            <div className="text">
-              <div className="comma">
-                <img
-                  src="/images/comma.svg"
-                  width={100}
-                  height={100}
-                  alt="Comma Icon"
-                />
-              </div>
-              <p>
-                “I've never experienced such an exciting way to get my hands on
-                premium tracksuits! The bidding process was seamless, and the
-                quality of the tracksuit I won exceeded my expectations.
-                Definitely my go-to for athletic wear now!”
-              </p>
-            </div>
-            <div className="image">
-              <img
-                src="/images/folio_02.jpg"
-                width={800}
-                height={600}
-                alt="Folio Photo"
-              />
-              <div className="btm">
-                <div className="name">Jennifer Kem</div>
-                <div className="desg">Product Manager at Jomanar</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* folio */}
+
+  <Testimonials />
+  
 </>
 
-      <Footer />
-    </>
   );
 }
